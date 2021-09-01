@@ -1,0 +1,23 @@
+@import "../lib/mixins.scss";
+@import "../lib/var.scss";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+body{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+header{
+  display:flex;
+  justify-content: center;
+
+  img{
+
+    width:50%;
+  
+  }
+}

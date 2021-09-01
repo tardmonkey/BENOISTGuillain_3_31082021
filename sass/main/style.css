@@ -1,0 +1,16 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header img {
+  width: 50%;
+}/*# sourceMappingURL=style.css.map */
