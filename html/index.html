@@ -7,6 +7,14 @@
     <link rel="stylesheet" type="text/css" href="/sass/main/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+        <!-- FONTS -->
 </head>
 
 <body>
@@ -20,24 +28,71 @@
                     <span>Paris, Belleville</span>
                 </div>
                 <div>
-                    <h1>Réservez le menu qui vous convient.</h1>
+                    <h1>Réservez le menu qui vous convient</h1>
                     <span>Découvrez des restaurants d'exception séléctionnés par nos soins.</span>
-                    <button></button>
+                    <a href="" class="btn">Explorez nos restaurants</a>
                 </div>
             </nav>
             <main>
-                <article id="howto">
+                <aside id="howto">
                     <h2>Fonctionnement</h2>
-                    <div><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</div>
-                    <div><i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i>Composez votre menu</div>
-                    <div><i class="fas fa-store"></i>Dégustez au restaurant</div>
-                </article>
-                <article id="cards">
+                    <div id="howto-btn">
+                        <div class="howto-btn_block">
+                            <span class="btn-rnd">1</span>
+                            <div class="howto-btn_frame">
+                                <i class="fas fa-mobile-alt"></i> <span>Choisissez un restaurant</span>
+                            </div>
+                        </div>
+                        <div class="howto-btn_block">
+                            <span class="btn-rnd">2</span>
+                            <div class="howto-btn_frame">
+                                <i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i><span>Composez votre menu</span>
+                            </div>
+                        </div>
+                        <div class="howto-btn_block">
+                            <span class="btn-rnd">3</span>    
+                            <div class="howto-btn_frame">
+                                 <i class="fas fa-store"></i><span>Dégustez au restaurant</span>
+                            </div>
+                        </div>
+                  </div>
+                </aside>
+                <article>
                     <h2>Restaurants</h2>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                    <div id="cards">
+                        <div class="card">
+                            <img alt="Photo du Restaurant La palette du goût" src="/images/restaurants/lapalettedugout.jpg" />
+                            <ul>
+                                <li>La palette du goût</li>
+                                <li>Ménilmontant</li>
+                            </ul>
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="card">
+                            <img alt="Photo du Restaurant La note enchantée" src="/images/restaurants/lanoteenchante.jpg" />
+                            <ul>
+                                <li>La note enchantée</li>
+                                <li>Charonne</li>
+                            </ul>
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="card">
+                            <img alt="Photo du Restaurant À la française" src="/images/restaurants/alafrancaise (2).jpg" />
+                            <ul>
+                                <li>À la française</li>
+                                <li>Cité rouge</li>
+                            </ul>
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="card">
+                            <img alt="Photo du Restaurant Le délice des sens" src="/images/restaurants/ledelicedusens.jpg" />
+                            <ul>
+                                <li>Le délice des sens</li>
+                                <li>folie-Méricourt</li>
+                            </ul>
+                            <i class="far fa-heart"></i>
+                    </div>
+                </div>  
                 </article>
             </main>
         </div>
