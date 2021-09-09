@@ -1,0 +1,43 @@
+.card {
+  margin: auto;
+  width: 90%;
+  height: 15rem;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+.card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 70%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.card ul {
+  padding: 1rem;
+}
+.card li:nth-child(1) {
+  font-weight: bold;
+}
+.card i {
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 20%;
+  left: 85%;
+}
+
+.card-menu {
+  margin: auto;
+  width: 90%;
+  height: 4rem;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+.card-menu li:nth-child(odd) {
+  font-weight: bold;
+}
+.card-menu li:nth-child(3) {
+  position: relative;
+  left: 90%;
+  bottom: 1rem;
+}/*# sourceMappingURL=cards.css.map */

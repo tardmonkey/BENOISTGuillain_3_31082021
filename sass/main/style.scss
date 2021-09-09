@@ -1,6 +1,9 @@
 @import "../lib/mixins.scss";
 @import "../lib/var.scss";
 @import "../lib/minireset.css";
+@import "../lib/footer.scss";
+@import "../lib/cards.scss";
+@import "../lib/titles.scss";
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -20,14 +23,22 @@ body{
 
 header{
   display:flex;
-  justify-content: center;
   height:4rem;
-  
+  align-items: center;
+  justify-content: center;
+
+    a i{
+      position: absolute;
+      left:1rem;
+      top:1.3rem;
+      font-size: x-large;
+      
+    }
   
   img{
     height:2rem;
     width:50%;
-    margin: auto;
+    
   }
 }
 
@@ -64,6 +75,10 @@ nav{
 
 main{
   padding-top:2rem;
+  
+}
+#main--menu{
+  padding:0;
 }
 
 #howto{
@@ -118,11 +133,17 @@ main{
 article{
   padding-top:3rem;padding-bottom:3rem;padding-left: 1rem;padding-right: 1rem;
   background-color: $color-lightgrey;
+  
   h2{
     margin-bottom: 1rem;
     padding-left:1rem;
     font-weight: 800;
   }
+}
+
+#article__rounded{
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
 }
 
 #cards{
@@ -132,33 +153,7 @@ article{
   
 }
 
-.card{
-  margin:auto;
-  width: 90%;
-  height:15rem;
-  background-color:#FFF;
-  border-radius: 1rem;
-  img{
-    width:100%;
-    object-fit: cover;
-    height:70%;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-  }
-  ul{
-    padding:1rem;
-  }
-  li:nth-child(1){
-    font-weight: bold;
-  }
-  i{
-    font-size: 1.5rem;
-    position: relative;
-    bottom:20%;
-    left:85%;
-    
-  }
-}
+
 
 .cardNew{
   background-color: $color-tertiary;
@@ -173,24 +168,4 @@ article{
   
 }
 
-footer{
-  background-color: $color-darkgrey;
-  display: flex;
-  flex-direction: column;
-  color:#fff;
-  padding:2rem;  
-  
-    img {
-      width: 6rem;
-      padding-bottom:1rem;
-    }
-  ul{
-        display:flex;
-        flex-direction: column;
-        gap:0.5rem;
-      
-        li:nth-child(-n+2){
-          font-weight: bold;
-        }
-    }
-  }
+

@@ -1,0 +1,21 @@
+footer{
+    background-color: $color-darkgrey;
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+    padding:2rem;  
+    
+      img {
+        width: 6rem;
+        padding-bottom:1rem;
+      }
+    ul{
+          display:flex;
+          flex-direction: column;
+          gap:0.5rem;
+        
+          li:nth-child(-n+2){
+            font-weight: bold;
+          }
+      }
+    }
