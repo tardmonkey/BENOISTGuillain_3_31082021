@@ -116,10 +116,12 @@ main{
 }
 
 article{
-  padding-top:2rem;
+  padding-top:3rem;padding-bottom:3rem;padding-left: 1rem;padding-right: 1rem;
   background-color: $color-lightgrey;
   h2{
     margin-bottom: 1rem;
+    padding-left:1rem;
+    font-weight: 800;
   }
 }
 
@@ -143,6 +145,32 @@ article{
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
   }
+  ul{
+    padding:1rem;
+  }
+  li:nth-child(1){
+    font-weight: bold;
+  }
+  i{
+    font-size: 1.5rem;
+    position: relative;
+    bottom:20%;
+    left:85%;
+    
+  }
+}
+
+.cardNew{
+  background-color: $color-tertiary;
+  padding:0.5rem;
+  position:relative;
+  left:65%;
+  bottom:95%;  
+  font-weight: bolder;
+  font-size: clamp(1rem, 2.5vm, 2rem);
+  color:darken($color: $color-tertiary, $amount: 40);
+  border-radius: .2rem;
+  
 }
 
 footer{
@@ -150,10 +178,19 @@ footer{
   display: flex;
   flex-direction: column;
   color:#fff;
-  padding:1rem;
-
-  img{
-    height: 2rem;
-    
+  padding:2rem;  
+  
+    img {
+      width: 6rem;
+      padding-bottom:1rem;
+    }
+  ul{
+        display:flex;
+        flex-direction: column;
+        gap:0.5rem;
+      
+        li:nth-child(-n+2){
+          font-weight: bold;
+        }
+    }
   }
-}
