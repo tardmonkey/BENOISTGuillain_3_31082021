@@ -1,3 +1,9 @@
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .card {
   margin: auto;
   width: 90%;
@@ -26,18 +32,28 @@
   left: 85%;
 }
 
-.card-menu {
-  margin: auto;
+.cardNew {
+  background-color: #99E2D0;
+  padding: 0.5rem;
+  position: relative;
+  left: 65%;
+  bottom: 95%;
+  font-weight: bolder;
+  font-size: clamp(1rem, 2.5vm, 2rem);
+  color: #278870;
+  border-radius: 0.2rem;
+}
+
+.card--wrap {
   width: 90%;
+  margin: auto;
   height: 4rem;
-  background-color: #FFF;
   border-radius: 1rem;
 }
-.card-menu li:nth-child(odd) {
-  font-weight: bold;
+
+.class--wrap__content {
+  background-color: #FFF;
 }
-.card-menu li:nth-child(3) {
-  position: relative;
-  left: 90%;
-  bottom: 1rem;
+.class--wrap__content li:nth-child(1), .class--wrap__content span {
+  font-weight: bold;
 }/*# sourceMappingURL=cards.css.map */

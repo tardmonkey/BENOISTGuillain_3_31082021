@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../lib/minireset.css";
 footer {
   background-color: #353535;
@@ -17,6 +18,12 @@ footer ul {
 }
 footer ul li:nth-child(-n+2) {
   font-weight: bold;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .card {
@@ -47,20 +54,30 @@ footer ul li:nth-child(-n+2) {
   left: 85%;
 }
 
-.card-menu {
-  margin: auto;
+.cardNew {
+  background-color: #99E2D0;
+  padding: 0.5rem;
+  position: relative;
+  left: 65%;
+  bottom: 95%;
+  font-weight: bolder;
+  font-size: clamp(1rem, 2.5vm, 2rem);
+  color: #278870;
+  border-radius: 0.2rem;
+}
+
+.card--wrap {
   width: 90%;
+  margin: auto;
   height: 4rem;
-  background-color: #FFF;
   border-radius: 1rem;
 }
-.card-menu li:nth-child(odd) {
-  font-weight: bold;
+
+.class--wrap__content {
+  background-color: #FFF;
 }
-.card-menu li:nth-child(3) {
-  position: relative;
-  left: 90%;
-  bottom: 1rem;
+.class--wrap__content li:nth-child(1), .class--wrap__content span {
+  font-weight: bold;
 }
 
 h1 {
@@ -73,6 +90,11 @@ h1 {
 
 h6 {
   font-family: "Shrikhand", cursive;
+}
+
+html {
+  max-width: 768px;
+  margin: auto;
 }
 
 body {
@@ -204,20 +226,17 @@ article h2 {
   border-top-right-radius: 3rem;
 }
 
-#cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.card--wrap__active {
+  visibility: hidden;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  position: relative;
+  bottom: 90%;
+  left: 84%;
+  border: red solid 2px;
+  padding: 1.2rem;
 }
 
-.cardNew {
-  background-color: #99E2D0;
-  padding: 0.5rem;
-  position: relative;
-  left: 65%;
-  bottom: 95%;
-  font-weight: bolder;
-  font-size: clamp(1rem, 2.5vm, 2rem);
-  color: #278870;
-  border-radius: 0.2rem;
+.card--wrap:active .card--wrap__active {
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */

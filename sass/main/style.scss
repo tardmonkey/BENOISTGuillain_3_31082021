@@ -13,7 +13,10 @@ h6{
   font-family: 'Shrikhand', cursive;
  }
 
-
+html{
+  max-width: 768px;  
+  margin:auto;
+}
 
 body{
   display: flex;
@@ -146,26 +149,28 @@ article{
   border-top-right-radius: 3rem;
 }
 
-#cards{
-  display: flex;
-  flex-direction: column;
-  gap:2rem;
-  
-}
 
 
 
-.cardNew{
-  background-color: $color-tertiary;
-  padding:0.5rem;
+
+
+.card--wrap__active{
+  visibility: hidden;
+  font-family: "Font Awesome 5 Free"; 
+  content:"\f004";
   position:relative;
-  left:65%;
-  bottom:95%;  
-  font-weight: bolder;
-  font-size: clamp(1rem, 2.5vm, 2rem);
-  color:darken($color: $color-tertiary, $amount: 40);
-  border-radius: .2rem;
+  bottom:90%;
+  left:84%;
+  border: red solid 2px;
+  // background-color:$color-tertiary;
+  padding:1.2rem;
   
 }
 
-
+.card--wrap:active{
+  .card--wrap__active{
+    visibility:visible;
+  }
+     
+  
+}
