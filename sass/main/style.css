@@ -84,6 +84,10 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
+[aria-hidden=true] {
+  visibility: hidden;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -107,21 +111,21 @@ header {
   display: flex;
   height: 4rem;
   align-items: center;
-  justify-content: center;
+  justify-content: baseline;
 }
 header a i {
-  position: absolute;
-  left: 1rem;
-  top: 1.3rem;
   font-size: x-large;
+  padding-left: 1rem;
 }
 header img {
-  height: 2rem;
-  width: 50%;
+  height: 60%;
+  margin: auto;
+  padding-right: 1rem;
 }
 
 nav {
   height: 20%;
+  overflow: hidden;
 }
 nav div:nth-child(1) {
   display: flex;
@@ -142,6 +146,7 @@ nav div:nth-child(2) {
   flex-direction: column;
   gap: 1rem;
   padding: 3rem;
+  align-items: center;
 }
 nav .btn {
   background: #9356dc;
@@ -153,6 +158,11 @@ nav .btn {
   margin: auto;
   box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.67);
 }
+nav img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.2);
+}
 
 main {
   padding-top: 2rem;
@@ -160,6 +170,9 @@ main {
 
 #main--menu {
   padding: 0;
+  margin-top: -3rem;
+  z-index: 3;
+  position: relative;
 }
 
 #howto {
