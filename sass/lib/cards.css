@@ -15,6 +15,7 @@
   height: 15rem;
   background-color: #FFF;
   border-radius: 1rem;
+  position: relative;
 }
 
 .card img {
@@ -34,19 +35,37 @@
   font-weight: bold;
 }
 
-.card i {
+.card i::after {
   font-size: 1.5rem;
   position: relative;
   bottom: 20%;
   left: 85%;
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-style: normal;
+  content: "\f004";
+}
+
+.card i:hover::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 1000;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
 }
 
 .cardNew {
   background-color: #99E2D0;
   padding: 0.5rem;
-  position: relative;
-  left: 65%;
-  bottom: 95%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate3d(-12px, 12px, 0);
+          transform: translate3d(-12px, 12px, 0);
   font-weight: bolder;
   font-size: clamp(1rem, 2.5vm, 2rem);
   color: #278870;

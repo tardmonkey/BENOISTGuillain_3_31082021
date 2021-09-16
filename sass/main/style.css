@@ -90,6 +90,7 @@ footer ul li:nth-child(-n+2) {
   height: 15rem;
   background-color: #FFF;
   border-radius: 1rem;
+  position: relative;
 }
 
 .card img {
@@ -109,19 +110,37 @@ footer ul li:nth-child(-n+2) {
   font-weight: bold;
 }
 
-.card i {
+.card i::after {
   font-size: 1.5rem;
   position: relative;
   bottom: 20%;
   left: 85%;
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-style: normal;
+  content: "\f004";
+}
+
+.card i:hover::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 1000;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
 }
 
 .cardNew {
   background-color: #99E2D0;
   padding: 0.5rem;
-  position: relative;
-  left: 65%;
-  bottom: 95%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate3d(-12px, 12px, 0);
+          transform: translate3d(-12px, 12px, 0);
   font-weight: bolder;
   font-size: clamp(1rem, 2.5vm, 2rem);
   color: #278870;
@@ -145,6 +164,7 @@ footer ul li:nth-child(-n+2) {
 
 h1 {
   font-family: 'Shrikhand', cursive;
+  font-size: calc(64px * 10vmin);
 }
 
 h2 {
@@ -244,7 +264,6 @@ nav div:nth-child(2) {
 }
 
 nav .btn {
-  background: #9356dc;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   border-radius: 2rem;
@@ -346,8 +365,10 @@ main {
 }
 
 .howto-btn_frame span {
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
+  -webkit-transform: translateX(4rem);
+          transform: translateX(4rem);
+  position: absolute;
+  left: 0;
 }
 
 .howto-btn_frame:hover {
@@ -375,6 +396,24 @@ article h2 {
 #article__rounded {
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
+}
+
+.article__rounded--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.article__rounded--title h1 {
+  margin-left: 1rem;
+}
+
+.article__rounded--title i {
+  font-size: 3rem;
 }
 
 .card--wrap__active {

@@ -8,39 +8,58 @@
 }
 
 .card{
-    margin:auto;
-    width: 90%;
-    height:15rem;
-    background-color:#FFF;
-    border-radius: 1rem;
-    img{
-      width:100%;
-      object-fit: cover;
-      height:70%;
-      border-top-right-radius: 1rem;
-      border-top-left-radius: 1rem;
-    }
-    ul{
-      padding:1rem;
-    }
-    li:nth-child(1){
-      font-weight: bold;
-    }
-    i{
-      font-size: 1.5rem;
-      position: relative;
-      bottom:20%;
-      left:85%;
+  margin:auto;
+  width: 90%;
+  height:15rem;
+  background-color:#FFF;
+  border-radius: 1rem;
+  position:relative;
+  img{
+    width:100%;
+    object-fit: cover;
+    height:70%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+  ul{
+    padding:1rem;
+  }
+  li:nth-child(1){
+    font-weight: bold;
+  }
+  i::after{
+    font-size: 1.5rem;
+    position: relative;
+    bottom:20%;
+    left:85%;
+    cursor:pointer;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    font-style: normal;
+    content:"\f004";
+    
+  }
+  i:hover{
+    &::after{
+      font-family: "Font Awesome 5 Free";
+      font-weight: 1000;
+      background-image: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      color: transparent;
       
     }
   }
+}
 
   .cardNew{
     background-color: $color-tertiary;
     padding:0.5rem;
-    position:relative;
-    left:65%;
-    bottom:95%;  
+    position:absolute;
+    top:0;
+    right:0;
+    transform: translate3d(-12px,12px,0);  
     font-weight: bolder;
     font-size: clamp(1rem, 2.5vm, 2rem);
     color:darken($color: $color-tertiary, $amount: 40);
