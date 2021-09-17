@@ -426,8 +426,8 @@ aside h3 {
   display: flex;
   padding: 1rem;
   background: white;
-  -webkit-transition: all .3sec;
-  transition: all .3sec;
+  -webkit-animation: cards-load 1s;
+          animation: cards-load 1s;
 }
 
 .card--wrap span {
@@ -436,5 +436,31 @@ aside h3 {
 
 .card--wrap:active .card--wrap__active {
   visibility: visible;
+}
+
+@-webkit-keyframes cards-load {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes cards-load {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

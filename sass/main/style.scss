@@ -208,6 +208,7 @@ aside h3{
   transform: translateX(1rem);
   margin-top: 1rem;
   margin-bottom: 1rem;
+  
 }
 
 .card--wrap{
@@ -218,7 +219,7 @@ aside h3{
   display: flex;
   padding:1rem;
   background: white;
-  transition: all .3sec;
+  animation: cards-load 1s;
    span{
     font-weight: 1000;
   }
@@ -228,5 +229,16 @@ aside h3{
       visibility:visible;
       
     }
+  }
+}
+
+@keyframes cards-load {
+  0%{
+    transform:translateY(50%);
+    opacity: 0%;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 100%;
   }
 }
