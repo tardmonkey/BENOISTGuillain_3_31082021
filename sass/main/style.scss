@@ -106,9 +106,8 @@ main{
   display: flex;
   flex-direction: column;
   gap:1.5rem;                             
- 
-  
 }
+
 .howto-btn_frame{
   cursor: pointer;
   display: flex;
@@ -185,8 +184,7 @@ article{
     margin-left:1rem;
   }
   i{
-    font-size: clamp(25px, 5vw, 70px);
-    
+    font-size: clamp(25px, 5vw, 70px);    
   }
   
 }
