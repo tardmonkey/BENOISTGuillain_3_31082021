@@ -1,10 +1,10 @@
 h1 {
   font-family: 'Shrikhand', cursive;
-  font-size: calc(64px * 10vmin);
+  font-size: clamp(20px, 5vw, 50px);
 }
 
 h2 {
   font-weight: bolder;
-  font-size: 1.7rem;
+  font-size: clamp(20px, 5vw, 50px);
 }
 /*# sourceMappingURL=titles.css.map */

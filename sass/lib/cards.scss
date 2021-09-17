@@ -53,7 +53,7 @@
   }
 }
 
-  .cardNew{
+.cardNew{
     background-color: $color-tertiary;
     padding:0.5rem;
     position:absolute;
@@ -67,19 +67,5 @@
     
   }
 
-  .card--wrap{
-    width: 90%;
-    margin:auto;
-    height:4rem;
-    border-radius: 1rem;
-  }
 
-  .class--wrap__content{
-    
-    background-color:#FFF;
-    li:nth-child(1), span{
-      font-weight: bold;
-    }
-  
-  }
 

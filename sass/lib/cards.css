@@ -71,19 +71,4 @@
   color: #278870;
   border-radius: .2rem;
 }
-
-.card--wrap {
-  width: 90%;
-  margin: auto;
-  height: 4rem;
-  border-radius: 1rem;
-}
-
-.class--wrap__content {
-  background-color: #FFF;
-}
-
-.class--wrap__content li:nth-child(1), .class--wrap__content span {
-  font-weight: bold;
-}
 /*# sourceMappingURL=cards.css.map */
