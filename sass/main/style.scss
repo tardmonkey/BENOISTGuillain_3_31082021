@@ -26,6 +26,7 @@ body{
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 header{
@@ -77,11 +78,7 @@ nav{
     box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.67);
     
   }
-  img{
-    object-fit: cover;
-    transform: scale(1.2);
-    
-  }
+  
 }
 
 main{
@@ -179,12 +176,14 @@ article{
 .article__rounded--title{
   display: flex;
   align-items: center;
-  gap:5rem;
+  justify-content: space-between;
   h1{
     margin-left:1rem;
+    white-space: nowrap;
   }
   i{
-    font-size: clamp(25px, 5vw, 70px);    
+    padding-right:1rem;
+    font-size: clamp(20px, 5vw, 70px);    
   }
   
 }
@@ -193,8 +192,19 @@ article{
   // VALIDATION ICON
   // VALIDATION ICON
   // VALIDATION ICON
-  visibility:hidden;
-  
+  opacity: 0;
+  height: 100%;
+  width:4rem;
+  background-color: $color-tertiary;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  position:absolute;
+  right:0;
+  border-top-right-radius: 1rem ;
+  border-bottom-right-radius: 1rem ;
+  font-size: 1.5rem;
 }
 
 
@@ -210,33 +220,91 @@ aside h3{
 }
 
 .card--wrap{
+  
   width: 90%;
   margin:auto;
   height:4rem;
   border-radius: 1rem;
   display: flex;
-  padding:1rem;
+  align-items: center;
   background: white;
-  animation: cards-load 1s;
-   span{
-    font-weight: 1000;
-  }
-  &:active{
+  animation: cards-load ease-in 1s;
+  padding-left:1rem;
+  
+  position: relative;
+ 
+    li:first-child{
+      font-weight: 1000;
+    }
+    li:last-child{
+      font-size:14px;
+      
+    }
+   .card--wrap__content{
+     position: relative;
+     width: 90%; 
+     height: 4rem;
+     display: flex;
+     align-items: center;
+     text-overflow: ellipsis;
+    span{
+      font-weight: 1000;
+      position: absolute;
+      bottom:10%;
+      right:-5%;
+      
+    }
+   } 
+  &:hover{
+    span{
+      transform-origin: left;
+      transform:translateX(-3rem);
+      transition: ease 500ms;
+    }
     .card--wrap__active{
-      
-      visibility:visible;
-      
+      animation:btn-active ease 500ms;
+      animation-fill-mode: forwards;
+       transform-origin: right;
+      i{
+        transform:rotate(360deg);
+        transition:ease;
+        transition-duration: 500ms;
+      }
+
     }
   }
 }
 
 @keyframes cards-load {
   0%{
-    transform:translateY(50%);
-    opacity: 0%;
+  transform:translate3d(0,15px,0);
+    opacity: 0;
   }
   100%{
-    transform: translateY(0);
-    opacity: 100%;
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+  
+}
+
+//LOOP DELAY ANIMATION FOR CARDS
+@for $i from 1 through 10 {
+  .card--wrap:nth-child(#{$i}n) {
+      animation-delay: #{$i * (50)}ms;
   }
 }
+
+@keyframes btn-active {
+  
+  0%{
+    opacity:0;
+    transform:scaleX(0);
+    
+  }
+  100%{
+    opacity:1;
+    transform:scaleX(1);
+    
+  }
+}
+
