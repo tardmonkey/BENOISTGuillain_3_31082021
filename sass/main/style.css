@@ -162,6 +162,10 @@ h2 {
           box-sizing: border-box;
 }
 
+#homepage--header {
+  visibility: hidden;
+}
+
 h6 {
   font-family: 'Shrikhand', cursive;
 }

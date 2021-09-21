@@ -10,6 +10,11 @@
 *, *:before, *:after {
     box-sizing: border-box;
   }
+
+#homepage--header{
+    visibility: hidden;
+    
+  }
 // Noms restaurants
 h6{
   font-family: 'Shrikhand', cursive;

@@ -61,7 +61,7 @@
     right:0;
     transform: translate3d(-12px,12px,0);  
     font-weight: bolder;
-    font-size: clamp(1rem, 2vm, 2rem);
+    font-size: clamp(1rem, 2.5vw, 2rem);
     color:darken($color: $color-tertiary, $amount: 40);
     border-radius: .2rem;
     
