@@ -1,4 +1,4 @@
-#cards {
+.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,7 +67,7 @@
   -webkit-transform: translate3d(-12px, 12px, 0);
           transform: translate3d(-12px, 12px, 0);
   font-weight: bolder;
-  font-size: clamp(1rem, 2.5vm, 2rem);
+  font-size: clamp(1rem, 2vm, 2rem);
   color: #278870;
   border-radius: .2rem;
 }

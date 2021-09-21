@@ -73,7 +73,7 @@ footer ul li:nth-child(-n+2) {
   font-weight: bold;
 }
 
-#cards {
+.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +142,7 @@ footer ul li:nth-child(-n+2) {
   -webkit-transform: translate3d(-12px, 12px, 0);
           transform: translate3d(-12px, 12px, 0);
   font-weight: bolder;
-  font-size: clamp(1rem, 2.5vm, 2rem);
+  font-size: clamp(1rem, 2vm, 2rem);
   color: #278870;
   border-radius: .2rem;
 }
@@ -194,9 +194,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
 }
 
 header a i {
