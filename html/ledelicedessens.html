@@ -3,42 +3,170 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ohmyfood - Accueil</title>
-    <link rel="stylesheet" type="text/css" href="/sass/main/style.css">
+    <title>Ohmyfood</title>
+    <link rel="stylesheet" type="text/css" href="../sass/main/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ce2ea1d23.js" crossorigin="anonymous"></script>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
         <!-- FONTS -->
 </head>
 
 <body>
+    
     <div id="content">
         <header>
-            <img src="/images/logo/ohmyfood.png" alt="Logo ohmyfood" />
+            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+            <img src="../images/logo/ohmyfood.png" alt="Logo ohmyfood" />
         </header>
-        <nav>
-            <img src="/images/restaurants/alafrancaise (2).jpg" alt="Photo du restaurant a la francaise">
-        </nav>
-        <main>
+        <div id="bg">
+            <img src="../images/restaurants/ledelicedusens.jpg" alt="Photo du restaurant le délice des sens">
+        </div>
+        <main id="main--menu">
+            <article id="article__rounded">    
+                <div class="article__rounded--title">
+                    <h1>Le délice des sens</h1>
+                    <i class="far fa-heart"></i>
+                </div>
+
+                <aside>
+
+                    <h3>ENTRÉES</h3>
+
+                    <div class="cards">
+                        <div class="card--wrap">                            
+                               <div class="card--wrap__content"> 
+                                   <ul>
+                                        <li>Tartare de thon</li>
+                                        <li>Assaisonné au yuzu</li>                                    
+                                    </ul>
+                                     <span>25€</span>    
+                             </div>                        
+                            <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                        </div>
+
+                        <div class="card--wrap">
+                            <div class="card--wrap__content"> 
+                                <ul>
+                                     <li>Bouchée de homard croustillant</li>
+                                     <li>Et sa farandole de petits légumes</li>                                    
+                                 </ul>
+                                  <span>35€</span>    
+                          </div>    
+                            <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                        </div>
+                        
+                
+                        <div class="card--wrap">
+                            <div class="card--wrap__content"> 
+                                <ul>
+                                     <li>Velouté de cèpes </li>
+                                     <li>Aux truffes</li>                                    
+                                 </ul>
+                                  <span>20€</span>    
+                            </div>    
+                            <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                </aside>
+                <aside>
+
+                    <h3>PLATS</h3>
+
+                    <div class="cards">
+                        <div class="card--wrap">                            
+                               <div class="card--wrap__content"> 
+                                   <ul>
+                                        <li>Poulet rôti aux herbes de Provence</li>
+                                        <li>Et sa crème de truffe</li>                                    
+                                    </ul>
+                                     <span>40€</span>    
+                             </div>                        
+                            <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                        </div>
+
+                        <div class="card--wrap">
+                            <div class="card--wrap__content"> 
+                                <ul>
+                                     <li>Langouste rôtie</li>
+                                     <li>Et ses légumes de saison</li>                                    
+                                 </ul>
+                                  <span>35€</span>    
+                          </div>    
+                            <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                        </div>
+                        
+                
+                        <div class="card--wrap">
+                            <div class="card--wrap__content"> 
+                                <ul>
+                                     <li>Côte de boeuf Angus</li>
+                                     <li>Et sa purée de panais</li>                                    
+                                 </ul>
+                                  <span>44€</span>    
+                            </div>    
+                            <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                </aside>
             
+            <aside>
+
+                <h3>DESSERTS</h3>
+
+                <div class="cards">
+                    <div class="card--wrap">                            
+                           <div class="card--wrap__content"> 
+                               <ul>
+                                    <li>Farandole de desserts</li>
+                                    <li>Du chef</li>                                    
+                                </ul>
+                                 <span>18€</span>    
+                         </div>                        
+                        <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="card--wrap">
+                        <div class="card--wrap__content"> 
+                            <ul>
+                                 <li>Crème brulée</li>
+                                 <li>Revisitée</li>                                    
+                             </ul>
+                              <span>22€</span>    
+                      </div>    
+                        <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                    
+            
+                    <div class="card--wrap">
+                        <div class="card--wrap__content"> 
+                            <ul>
+                                 <li>Tiramisu</li>
+                                 <li>À la noisette</li>                                    
+                             </ul>
+                              <span>23€</span>    
+                        </div>    
+                        <div class="card--wrap__active"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>
+            </aside>
+            </article>
         </main>
 
     </div>
-</body>
     <footer>
-            <img src="/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
-                
-            <ul>
-                <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
-            </ul>
-    </footer>
+        <img src="../images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
+            
+        <ul>
+            <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+</footer>
+</body>
+    
 </html>

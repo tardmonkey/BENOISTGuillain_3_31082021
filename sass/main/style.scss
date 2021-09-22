@@ -233,7 +233,6 @@ aside h3{
   background: white;
   animation: cards-load ease-in 1s;
   padding-left:1rem;
-  
   position: relative;
  
     li:first-child{
@@ -259,12 +258,22 @@ aside h3{
     }
    } 
   &:hover{
+    @media (max-width:400px){
+      ul li{
+      width:90%;
+      text-overflow:ellipsis;
+      overflow:hidden;
+      white-space: nowrap;
+    }
+  }
+    
     span{
       transform-origin: left;
       transform:translateX(-3rem);
       transition: ease 500ms;
     }
     .card--wrap__active{
+      
       animation:btn-active ease 500ms;
       animation-fill-mode: forwards;
        transform-origin: right;
@@ -275,6 +284,7 @@ aside h3{
       }
 
     }
+    
   }
 }
 

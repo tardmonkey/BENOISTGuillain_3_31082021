@@ -474,6 +474,15 @@ aside h3 {
   right: -5%;
 }
 
+@media (max-width: 400px) {
+  .card--wrap:hover ul li {
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
 .card--wrap:hover span {
   -webkit-transform-origin: left;
           transform-origin: left;
