@@ -260,7 +260,7 @@ aside h3{
   &:hover{
     @media (max-width:400px){
       ul li{
-      width:90%;
+      width:100%;
       text-overflow:ellipsis;
       overflow:hidden;
       white-space: nowrap;
@@ -271,6 +271,7 @@ aside h3{
       transform-origin: left;
       transform:translateX(-3rem);
       transition: ease 500ms;
+      padding-right:5%;
     }
     .card--wrap__active{
       
