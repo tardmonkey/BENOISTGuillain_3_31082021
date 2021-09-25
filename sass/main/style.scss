@@ -223,9 +223,7 @@ aside h3{
 }
 
 .card--wrap{
-  
   width: 90%;
-  margin:auto;
   height:4rem;
   border-radius: 1rem;
   display: flex;
@@ -234,7 +232,6 @@ aside h3{
   animation: cards-load ease-in 1s;
   padding-left:1rem;
   position: relative;
- 
     li:first-child{
       font-weight: 1000;
     }
@@ -248,7 +245,7 @@ aside h3{
      height: 4rem;
      display: flex;
      align-items: center;
-     text-overflow: ellipsis;
+     transition: all ease 500ms;
     span{
       font-weight: 1000;
       position: absolute;
@@ -258,20 +255,30 @@ aside h3{
     }
    } 
   &:hover{
-    @media (max-width:400px){
-      ul li{
-      width:100%;
+  //   @media (max-width:400px){
+  //     ul li{
+  //     width:100%;
+      // text-overflow:ellipsis;
+      // overflow:hidden;
+      // white-space: nowrap;
+  //   }
+  // }
+
+  
+    
+    // span{
+    //   transform-origin: left;
+    //   transform:translateX(-3rem);
+    //   transition: ease 500ms;
+    //   padding-right:5%;
+    // }
+    .card--wrap__content{width:calc(100% - 5rem);
+    p  {
       text-overflow:ellipsis;
       overflow:hidden;
       white-space: nowrap;
     }
-  }
     
-    span{
-      transform-origin: left;
-      transform:translateX(-3rem);
-      transition: ease 500ms;
-      padding-right:5%;
     }
     .card--wrap__active{
       
