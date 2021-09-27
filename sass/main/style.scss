@@ -32,6 +32,17 @@ body{
   
 }
 
+#bg {
+
+  overflow: hidden;
+img{
+ height: 250px;
+ width: 100%;
+ object-fit: cover;
+
+
+}
+}
 header{
   display:flex;
   height:4rem;
@@ -160,7 +171,7 @@ main{
 }
 
 article{
-  padding-top:3rem;padding-bottom:3rem;padding-left: 1rem;padding-right: 1rem;
+  padding-top:2rem;padding-bottom:3rem;padding-left: 1rem;padding-right: 1rem;
   background-color: $color-lightgrey;
   
   h2{
@@ -223,20 +234,27 @@ aside h3{
 }
 
 .card--wrap{
-  width: 90%;
+  width: 95%;
   height:4rem;
   border-radius: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   background: white;
   animation: cards-load ease-in 1s;
-  padding-left:1rem;
+  padding-left:0.5rem;
   position: relative;
-    li:first-child{
+  p  {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+  }
+
+    p:first-child{
       font-weight: 1000;
+      font-size: normal;
     }
-    li:last-child{
-      font-size:14px;
+    p:last-child{
+      font-size:small;
       
     }
    .card--wrap__content{
@@ -244,8 +262,10 @@ aside h3{
      width: 90%; 
      height: 4rem;
      display: flex;
-     align-items: center;
+     flex-direction: column;
+     justify-content: center;
      transition: all ease 500ms;
+     
     span{
       font-weight: 1000;
       position: absolute;
@@ -255,28 +275,14 @@ aside h3{
     }
    } 
   &:hover{
-  //   @media (max-width:400px){
-  //     ul li{
-  //     width:100%;
-      // text-overflow:ellipsis;
-      // overflow:hidden;
-      // white-space: nowrap;
-  //   }
-  // }
-
   
-    
-    // span{
-    //   transform-origin: left;
-    //   transform:translateX(-3rem);
-    //   transition: ease 500ms;
-    //   padding-right:5%;
-    // }
-    .card--wrap__content{width:calc(100% - 5rem);
+    .card--wrap__content{width:calc(100% - 5.5rem);
+      
     p  {
       text-overflow:ellipsis;
       overflow:hidden;
       white-space: nowrap;
+      width: 90%;
     }
     
     }

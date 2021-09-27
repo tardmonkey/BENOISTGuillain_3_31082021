@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAAA,EAAE,CAAA;EAAC,WAAW,EAAE,oBAAoB;EAAC,SAAS,EAAE,sBAAsB;CAAG;;AACzE,AAAA,EAAE,CAAA;EAAC,WAAW,EAAE,MAAM;EAAC,SAAS,EAAE,sBAAsB;CAAG",
-    "sources": [
-        "titles.scss"
-    ],
-    "names": [],
-    "file": "titles.css"
-}
+{"version":3,"sources":["titles.scss"],"names":[],"mappings":"AACA;EAAG,iCAAA;EAAkC,iCAAA;AAErC;;AADA;EAAG,mBAAA;EAAoB,iCAAA;AAMvB","file":"titles.css"}
