@@ -6,6 +6,84 @@
 @import "../lib/titles.scss";
 
 
+#loader--wrap{
+  
+  #loader{
+    z-index:1001;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    #loader__icon--wrap{
+      position: relative;
+      left:25%;
+      display: flex;
+      flex-direction: row;
+      gap:1rem;
+      color:white;
+      
+    }
+  } 
+  .loader-aside{
+  position: fixed;
+  top:0;
+  width:51%;
+  height: 100%;
+  background: $color-gradient;
+  z-index: 1000;
+  }
+  .aside-left{
+    left:0;
+    animation:500ms left-load ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1500ms;
+  }
+  .aside-right{
+    right:0;
+    animation:500ms right-load ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1500ms;
+  }
+}
+
+@keyframes animated-dots {
+  0%{
+    opacity:1;
+    color:$color-primary;
+  }
+  50%{
+    color:$color-secondary;
+    
+  }
+  100%{
+    color:$color-tertiary;
+  }
+}
+
+.loader__icon{
+  opacity:0;
+  animation: 800ms animated-dots ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+}
+
+@for $i from 1 through 3 {
+  .loader__icon:nth-child(#{$i}n) {
+      animation-delay: #{$i * (50)}ms;
+      
+  }
+}
+
+@keyframes left-load {
+  100%{
+    transform: translate3d(0, -100%,0);
+  }
+}
+@keyframes right-load {
+  100%{
+    transform: translate3d(0,100%,0);
+  }
+}
+
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -16,9 +94,7 @@
     
   }
 // Noms restaurants
-h6{
-  font-family: 'Shrikhand', cursive;
- }
+
 
 html{
   max-width: 768px;  
@@ -203,12 +279,12 @@ article{
 }
 
 .card--wrap__active{
-  // VALIDATION ICON
-  // VALIDATION ICON
-  // VALIDATION ICON
-  opacity: 0;
+  // COCHE
+  // COCHE
+  // COCHE
+  
   height: 100%;
-  width:4rem;
+  width:0px;
   background-color: $color-tertiary;
   display:flex;
   align-items: center;
@@ -219,6 +295,11 @@ article{
   border-top-right-radius: 1rem ;
   border-bottom-right-radius: 1rem ;
   font-size: 1.5rem;
+  transition: width ease 700ms;
+  i{
+    opacity:1;
+    
+  }
 }
 
 
@@ -243,6 +324,7 @@ aside h3{
   animation: cards-load ease-in 1s;
   padding-left:0.5rem;
   position: relative;
+  overflow: hidden;
   p  {
     text-overflow:ellipsis;
     overflow:hidden;
@@ -264,7 +346,7 @@ aside h3{
      display: flex;
      flex-direction: column;
      justify-content: center;
-     transition: all ease 500ms;
+     transition: width ease 500ms;
      
     span{
       font-weight: 1000;
@@ -276,7 +358,8 @@ aside h3{
    } 
   &:hover{
   
-    .card--wrap__content{width:calc(100% - 5.5rem);
+    .card--wrap__content{
+      width:calc(100% - 5.5rem);
       
     p  {
       text-overflow:ellipsis;
@@ -287,19 +370,27 @@ aside h3{
     
     }
     .card--wrap__active{
-      
-      animation:btn-active ease 500ms;
-      animation-fill-mode: forwards;
-       transform-origin: right;
+      width:4rem;
+      opacity:1;
       i{
-        transform:rotate(360deg);
-        transition:ease;
-        transition-duration: 500ms;
+        
+        animation-name: rotate-icon;
+        animation-duration: 700ms;
+        animation-fill-mode:forwards;
       }
-
     }
     
   }
+}
+
+@keyframes rotate-icon {
+ 
+  100% { 
+    opacity:1;
+    transform: rotate(360deg);
+
+    }
+    
 }
 
 @keyframes cards-load {
@@ -315,23 +406,9 @@ aside h3{
 }
 
 //LOOP DELAY ANIMATION FOR CARDS
-@for $i from 1 through 10 {
+@for $i from 1 through 4 {
   .card--wrap:nth-child(#{$i}n) {
       animation-delay: #{$i * (50)}ms;
-  }
-}
-
-@keyframes btn-active {
-  
-  0%{
-    opacity:0;
-    transform:scaleX(0);
-    
-  }
-  100%{
-    opacity:1;
-    transform:scaleX(1);
-    
   }
 }
 

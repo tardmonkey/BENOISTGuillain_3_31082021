@@ -134,16 +134,128 @@ h2 {
   font-size: clamp(20px, 5vw, 50px);
 }
 
+h6 {
+  font-family: "Shrikhand", cursive;
+}
+
+#loader--wrap #loader {
+  z-index: 1001;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+#loader--wrap #loader #loader__icon--wrap {
+  position: relative;
+  left: 25%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: white;
+}
+#loader--wrap .loader-aside {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  z-index: 1000;
+}
+#loader--wrap .aside-left {
+  left: 0;
+  -webkit-animation: 500ms left-load ease;
+          animation: 500ms left-load ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+#loader--wrap .aside-right {
+  right: 0;
+  -webkit-animation: 500ms right-load ease;
+          animation: 500ms right-load ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+@-webkit-keyframes animated-dots {
+  0% {
+    opacity: 1;
+    color: #9356DC;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #99E2D0;
+  }
+}
+
+@keyframes animated-dots {
+  0% {
+    opacity: 1;
+    color: #9356DC;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #99E2D0;
+  }
+}
+.loader__icon {
+  opacity: 0;
+  -webkit-animation: 800ms animated-dots ease;
+          animation: 800ms animated-dots ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+.loader__icon:nth-child(1n) {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+.loader__icon:nth-child(2n) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.loader__icon:nth-child(3n) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+@-webkit-keyframes left-load {
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes left-load {
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@-webkit-keyframes right-load {
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes right-load {
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 #homepage--header {
   visibility: hidden;
-}
-
-h6 {
-  font-family: "Shrikhand", cursive;
 }
 
 html {
@@ -321,9 +433,8 @@ article h2 {
 }
 
 .card--wrap__active {
-  opacity: 0;
   height: 100%;
-  width: 4rem;
+  width: 0px;
   background-color: #99E2D0;
   display: flex;
   align-items: center;
@@ -334,6 +445,10 @@ article h2 {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   font-size: 1.5rem;
+  transition: width ease 700ms;
+}
+.card--wrap__active i {
+  opacity: 1;
 }
 
 aside h3 {
@@ -357,6 +472,7 @@ aside h3 {
           animation: cards-load ease-in 1s;
   padding-left: 0.5rem;
   position: relative;
+  overflow: hidden;
 }
 .card--wrap p {
   text-overflow: ellipsis;
@@ -377,7 +493,7 @@ aside h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all ease 500ms;
+  transition: width ease 500ms;
 }
 .card--wrap .card--wrap__content span {
   font-weight: 1000;
@@ -395,18 +511,31 @@ aside h3 {
   width: 90%;
 }
 .card--wrap:hover .card--wrap__active {
-  -webkit-animation: btn-active ease 500ms;
-          animation: btn-active ease 500ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  transform-origin: right;
+  width: 4rem;
+  opacity: 1;
 }
 .card--wrap:hover .card--wrap__active i {
-  transform: rotate(360deg);
-  transition: ease;
-  transition-duration: 500ms;
+  -webkit-animation-name: rotate-icon;
+          animation-name: rotate-icon;
+  -webkit-animation-duration: 700ms;
+          animation-duration: 700ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes rotate-icon {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-icon {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes cards-load {
   0% {
     transform: translate3d(0, 15px, 0);
@@ -417,7 +546,6 @@ aside h3 {
     opacity: 1;
   }
 }
-
 @keyframes cards-load {
   0% {
     transform: translate3d(0, 15px, 0);
@@ -446,56 +574,4 @@ aside h3 {
 .card--wrap:nth-child(4n) {
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
-}
-
-.card--wrap:nth-child(5n) {
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
-}
-
-.card--wrap:nth-child(6n) {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-
-.card--wrap:nth-child(7n) {
-  -webkit-animation-delay: 350ms;
-          animation-delay: 350ms;
-}
-
-.card--wrap:nth-child(8n) {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-}
-
-.card--wrap:nth-child(9n) {
-  -webkit-animation-delay: 450ms;
-          animation-delay: 450ms;
-}
-
-.card--wrap:nth-child(10n) {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-}
-
-@-webkit-keyframes btn-active {
-  0% {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-}
-
-@keyframes btn-active {
-  0% {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
-  }
 }/*# sourceMappingURL=style.css.map */
