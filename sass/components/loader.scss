@@ -1,0 +1,48 @@
+#loader--wrap{
+  
+    #loader{
+      z-index:1001;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      #loader__icon--wrap{
+        position: absolute;
+        left:30%;
+        margin:auto;
+        display: flex;
+        flex-direction: row;
+        gap:1rem;
+        color:white;
+        
+      }
+    } 
+    .loader-aside{
+    position: fixed;
+    top:0;
+    width:51%;
+    height: 100%;
+    background: $color-gradient;
+    z-index: 1000;
+    }
+    .aside-left{
+      left:0;
+      animation:500ms left-load ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1500ms;
+    }
+    .aside-right{
+      right:0;
+      animation:500ms right-load ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1500ms;
+    }
+  }
+  
+  
+  
+  .loader__icon{
+    opacity:0;
+    animation: 800ms animated-dots ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+  }

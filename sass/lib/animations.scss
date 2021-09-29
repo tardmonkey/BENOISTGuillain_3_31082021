@@ -1,0 +1,77 @@
+//LOADER
+//LOADER
+//LOADER
+//LOADER
+@keyframes animated-dots {
+    0%{
+      
+      opacity:1;
+      color:$color-primary;
+    }
+    50%{
+      color:$color-secondary;
+      
+    }
+    100%{
+      color:$color-tertiary;
+    }
+  }
+
+//LOOP FOR LOADING DOTS EFFECTS
+//LOOP FOR LOADING DOTS EFFECTS
+//LOOP FOR LOADING DOTS EFFECTS
+@for $i from 1 through 3 {
+    .loader__icon:nth-child(#{$i}n) {
+        animation-delay: #{$i * (50)}ms;
+        
+    }
+  }
+  
+  @keyframes left-load {
+    100%{
+      transform: translate3d(0, -100%,0);
+    }
+  }
+  @keyframes right-load {
+    100%{
+      transform: translate3d(0,100%,0);
+    }
+  }
+
+// COCHE  
+// COCHE  
+// COCHE  
+@keyframes rotate-icon {
+ 
+    100% { 
+      opacity:1;
+      transform: rotate(360deg);
+  
+      }
+      
+  }
+  
+//   CARDS APPEARS
+//   CARDS APPEARS
+//   CARDS APPEARS
+  @keyframes cards-load {
+    0%{
+    transform:translate3d(0,15px,0);
+      opacity: 0;
+    }
+    100%{
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+    
+  }
+  
+  //LOOP DELAY ANIMATION FOR CARDS
+  //LOOP DELAY ANIMATION FOR CARDS
+  //LOOP DELAY ANIMATION FOR CARDS
+  @for $i from 1 through 4 {
+    .card--wrap:nth-child(#{$i}n) {
+        animation-delay: #{$i * (50)}ms;
+    }
+  }
+  

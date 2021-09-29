@@ -1,0 +1,87 @@
+.loader__icon:nth-child(1n) {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+.loader__icon:nth-child(2n) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.loader__icon:nth-child(3n) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+@-webkit-keyframes left-load {
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes left-load {
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@-webkit-keyframes right-load {
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes right-load {
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@-webkit-keyframes rotate-icon {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-icon {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes cards-load {
+  0% {
+    transform: translate3d(0, 15px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes cards-load {
+  0% {
+    transform: translate3d(0, 15px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.card--wrap:nth-child(1n) {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+.card--wrap:nth-child(2n) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.card--wrap:nth-child(3n) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.card--wrap:nth-child(4n) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}/*# sourceMappingURL=animations.css.map */

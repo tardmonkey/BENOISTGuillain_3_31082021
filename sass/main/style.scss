@@ -1,88 +1,11 @@
 @import "../lib/mixins.scss";
 @import "../lib/var.scss";
 @import "../lib/minireset.scss";
-@import "../lib/footer.scss";
-@import "../lib/cards.scss";
-@import "../lib/titles.scss";
-
-
-#loader--wrap{
-  
-  #loader{
-    z-index:1001;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    #loader__icon--wrap{
-      position: relative;
-      left:25%;
-      display: flex;
-      flex-direction: row;
-      gap:1rem;
-      color:white;
-      
-    }
-  } 
-  .loader-aside{
-  position: fixed;
-  top:0;
-  width:51%;
-  height: 100%;
-  background: $color-gradient;
-  z-index: 1000;
-  }
-  .aside-left{
-    left:0;
-    animation:500ms left-load ease;
-    animation-fill-mode: forwards;
-    animation-delay: 1500ms;
-  }
-  .aside-right{
-    right:0;
-    animation:500ms right-load ease;
-    animation-fill-mode: forwards;
-    animation-delay: 1500ms;
-  }
-}
-
-@keyframes animated-dots {
-  0%{
-    opacity:1;
-    color:$color-primary;
-  }
-  50%{
-    color:$color-secondary;
-    
-  }
-  100%{
-    color:$color-tertiary;
-  }
-}
-
-.loader__icon{
-  opacity:0;
-  animation: 800ms animated-dots ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 2;
-}
-
-@for $i from 1 through 3 {
-  .loader__icon:nth-child(#{$i}n) {
-      animation-delay: #{$i * (50)}ms;
-      
-  }
-}
-
-@keyframes left-load {
-  100%{
-    transform: translate3d(0, -100%,0);
-  }
-}
-@keyframes right-load {
-  100%{
-    transform: translate3d(0,100%,0);
-  }
-}
+@import "../components/footer.scss";
+@import "../components/cards.scss";
+@import "../components/titles.scss";
+@import "../components/loader.scss";
+@import "../lib/animations.scss";
 
 
 *, *:before, *:after {
@@ -93,8 +16,6 @@
     visibility: hidden;
     
   }
-// Noms restaurants
-
 
 html{
   max-width: 768px;  
@@ -247,7 +168,7 @@ main{
 }
 
 article{
-  padding-top:2rem;padding-bottom:3rem;padding-left: 1rem;padding-right: 1rem;
+  padding-top:2rem;padding-bottom:3rem;
   background-color: $color-lightgrey;
   
   h2{
@@ -380,35 +301,6 @@ aside h3{
       }
     }
     
-  }
-}
-
-@keyframes rotate-icon {
- 
-  100% { 
-    opacity:1;
-    transform: rotate(360deg);
-
-    }
-    
-}
-
-@keyframes cards-load {
-  0%{
-  transform:translate3d(0,15px,0);
-    opacity: 0;
-  }
-  100%{
-    transform: translate3d(0,0,0);
-    opacity: 1;
-  }
-  
-}
-
-//LOOP DELAY ANIMATION FOR CARDS
-@for $i from 1 through 4 {
-  .card--wrap:nth-child(#{$i}n) {
-      animation-delay: #{$i * (50)}ms;
   }
 }
 

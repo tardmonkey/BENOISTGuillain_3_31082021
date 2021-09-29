@@ -102,13 +102,46 @@ footer ul li:nth-child(-n+2) {
   content: "";
 }
 .card i:hover::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 1000;
-  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
+  -webkit-animation: heart-fill ease 1100ms;
+          animation: heart-fill ease 1100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes heart-fill {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1000;
+    background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes heart-fill {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1000;
+    background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+  }
 }
 
 .cardNew {
@@ -131,7 +164,7 @@ h1 {
 
 h2 {
   font-weight: bolder;
-  font-size: clamp(20px, 5vw, 50px);
+  font-size: clamp(30px, 5vw, 50px);
 }
 
 h6 {
@@ -145,8 +178,9 @@ h6 {
   top: 50%;
 }
 #loader--wrap #loader #loader__icon--wrap {
-  position: relative;
-  left: 25%;
+  position: absolute;
+  left: 30%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -179,6 +213,16 @@ h6 {
           animation-delay: 1500ms;
 }
 
+.loader__icon {
+  opacity: 0;
+  -webkit-animation: 800ms animated-dots ease;
+          animation: 800ms animated-dots ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
 @-webkit-keyframes animated-dots {
   0% {
     opacity: 1;
@@ -204,16 +248,6 @@ h6 {
     color: #99E2D0;
   }
 }
-.loader__icon {
-  opacity: 0;
-  -webkit-animation: 800ms animated-dots ease;
-          animation: 800ms animated-dots ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-}
-
 .loader__icon:nth-child(1n) {
   -webkit-animation-delay: 50ms;
           animation-delay: 50ms;
@@ -250,6 +284,58 @@ h6 {
     transform: translate3d(0, 100%, 0);
   }
 }
+@-webkit-keyframes rotate-icon {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-icon {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes cards-load {
+  0% {
+    transform: translate3d(0, 15px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes cards-load {
+  0% {
+    transform: translate3d(0, 15px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.card--wrap:nth-child(1n) {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+.card--wrap:nth-child(2n) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.card--wrap:nth-child(3n) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.card--wrap:nth-child(4n) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -323,6 +409,7 @@ nav .btn {
   border-radius: 2rem;
   color: #fff;
   padding: 1rem;
+  max-width: 70vw;
   margin: auto;
   box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.67);
 }
@@ -403,8 +490,6 @@ main {
 article {
   padding-top: 2rem;
   padding-bottom: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   background-color: #f6f6f6;
 }
 article h2 {
@@ -521,57 +606,4 @@ aside h3 {
           animation-duration: 700ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes rotate-icon {
-  100% {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-icon {
-  100% {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes cards-load {
-  0% {
-    transform: translate3d(0, 15px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-@keyframes cards-load {
-  0% {
-    transform: translate3d(0, 15px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-.card--wrap:nth-child(1n) {
-  -webkit-animation-delay: 50ms;
-          animation-delay: 50ms;
-}
-
-.card--wrap:nth-child(2n) {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-
-.card--wrap:nth-child(3n) {
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
-}
-
-.card--wrap:nth-child(4n) {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
 }/*# sourceMappingURL=style.css.map */

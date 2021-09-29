@@ -40,13 +40,46 @@
   content: "";
 }
 .card i:hover::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 1000;
-  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
+  -webkit-animation: heart-fill ease 1100ms;
+          animation: heart-fill ease 1100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes heart-fill {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1000;
+    background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes heart-fill {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1000;
+    background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+  }
 }
 
 .cardNew {

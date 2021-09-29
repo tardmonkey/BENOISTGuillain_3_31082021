@@ -5,7 +5,7 @@ h1 {
 
 h2 {
   font-weight: bolder;
-  font-size: clamp(20px, 5vw, 50px);
+  font-size: clamp(30px, 5vw, 50px);
 }
 
 h6 {
