@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "desktop.css";
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -152,7 +153,7 @@ footer ul li:nth-child(-n+2) {
   right: 0;
   transform: translate3d(-12px, 12px, 0);
   font-weight: bolder;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(16px, 2.5vw, 1rem);
   color: #278870;
   border-radius: 0.2rem;
 }
@@ -345,7 +346,7 @@ h6 {
 }
 
 html {
-  max-width: 768px;
+  max-width: 1200px;
   margin: auto;
 }
 

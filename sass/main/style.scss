@@ -6,6 +6,7 @@
 @import "../components/titles.scss";
 @import "../components/loader.scss";
 @import "../lib/animations.scss";
+@import "desktop.css";
 
 
 *, *:before, *:after {
@@ -18,7 +19,7 @@
   }
 
 html{
-  max-width: 768px;  
+  max-width: 1200px;  
   margin:auto;
 }
 

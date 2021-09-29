@@ -90,7 +90,7 @@
   right: 0;
   transform: translate3d(-12px, 12px, 0);
   font-weight: bolder;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(16px, 2.5vw, 1rem);
   color: #278870;
   border-radius: 0.2rem;
 }/*# sourceMappingURL=cards.css.map */

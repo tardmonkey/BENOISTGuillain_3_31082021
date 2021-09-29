@@ -1,0 +1,52 @@
+@media only screen and (min-width: 769px) {
+    aside{
+        h2{
+            text-align: center;
+        }
+    }
+   #howto-btn{
+       width:50%;
+       margin:auto;
+   }
+   article{
+       .cards{
+           flex-direction: row;
+           flex-wrap: wrap;
+           gap:2rem;
+       }
+       .card{
+           width:45%;
+           
+       }
+       
+        h2{
+            text-align: center;
+            }
+       
+   }
+
+   #article__rounded{
+       padding:2rem;
+    .aside-wrapper{
+        
+        gap:2rem;
+        display: flex;
+        flex-direction: row;
+       
+    }
+ }
+
+footer{
+    text-align: center;
+    img{
+        
+        margin:auto;
+    }
+}
+
+
+
+
+
+  }
+
