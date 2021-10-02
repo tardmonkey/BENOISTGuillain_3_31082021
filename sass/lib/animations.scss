@@ -16,6 +16,23 @@
       color:$color-tertiary;
     }
   }
+  @keyframes left-load {
+    100%{
+      transform: translate3d(0, -100%,0);
+    }
+  }
+  @keyframes right-load {
+    100%{
+      transform: translate3d(0,100%,0);
+      display: none;
+    }
+  }
+
+  @keyframes top-load {
+    100%{
+      transform:translate3d(0,-10000%,0);
+    }
+  }
 
 //LOOP FOR LOADING DOTS EFFECTS
 //LOOP FOR LOADING DOTS EFFECTS
@@ -27,16 +44,6 @@
     }
   }
   
-  @keyframes left-load {
-    100%{
-      transform: translate3d(0, -100%,0);
-    }
-  }
-  @keyframes right-load {
-    100%{
-      transform: translate3d(0,100%,0);
-    }
-  }
 
 // COCHE  
 // COCHE  

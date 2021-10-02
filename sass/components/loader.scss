@@ -5,6 +5,11 @@
       position: absolute;
       left: 50%;
       top:50%;
+      img{
+        animation:500ms top-load ease;
+        animation-fill-mode: forwards;
+        animation-delay: 1500ms;
+      }
       #loader__icon--wrap{
         position: absolute;
         left:30%;

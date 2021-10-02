@@ -72,6 +72,10 @@ nav{
       i,span{
         margin-top:auto;
         margin-bottom: auto;      
+
+        span{
+          font-weight:1000;
+        }
     }
   }
 
@@ -169,7 +173,7 @@ main{
 }
 
 article{
-  padding-top:2rem;padding-bottom:3rem;
+  padding-top:3rem;padding-bottom:3rem;
   background-color: $color-lightgrey;
   
   h2{
@@ -182,7 +186,7 @@ article{
 #article__rounded{
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
-  
+  padding-top: 2rem;
 }
 
 .article__rounded--title{
@@ -194,8 +198,9 @@ article{
     white-space: nowrap;
   }
   i{
-    padding-right:1rem;
+    padding-right:1.5rem;
     font-size: clamp(20px, 5vw, 70px);    
+    
   }
   
 }
@@ -247,6 +252,10 @@ aside h3{
   padding-left:0.5rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 2px 18px -11px rgba(0,0,0,0.76);
+
+
+
   p  {
     text-overflow:ellipsis;
     overflow:hidden;
@@ -254,11 +263,12 @@ aside h3{
   }
 
     p:first-child{
-      font-weight: 1000;
-      font-size: normal;
+     font-weight: 900;
+     
     }
-    p:last-child{
-      font-size:small;
+    p:nth-child(2){
+      font-size: 14px;
+      
       
     }
    .card--wrap__content{

@@ -178,6 +178,14 @@ h6 {
   left: 50%;
   top: 50%;
 }
+#loader--wrap #loader img {
+  -webkit-animation: 500ms top-load ease;
+          animation: 500ms top-load ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
 #loader--wrap #loader #loader__icon--wrap {
   position: absolute;
   left: 30%;
@@ -249,6 +257,38 @@ h6 {
     color: #99E2D0;
   }
 }
+@-webkit-keyframes left-load {
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes left-load {
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@-webkit-keyframes right-load {
+  100% {
+    transform: translate3d(0, 100%, 0);
+    display: none;
+  }
+}
+@keyframes right-load {
+  100% {
+    transform: translate3d(0, 100%, 0);
+    display: none;
+  }
+}
+@-webkit-keyframes top-load {
+  100% {
+    transform: translate3d(0, -10000%, 0);
+  }
+}
+@keyframes top-load {
+  100% {
+    transform: translate3d(0, -10000%, 0);
+  }
+}
 .loader__icon:nth-child(1n) {
   -webkit-animation-delay: 50ms;
           animation-delay: 50ms;
@@ -264,33 +304,13 @@ h6 {
           animation-delay: 150ms;
 }
 
-@-webkit-keyframes left-load {
-  100% {
-    transform: translate3d(0, -100%, 0);
-  }
-}
-
-@keyframes left-load {
-  100% {
-    transform: translate3d(0, -100%, 0);
-  }
-}
-@-webkit-keyframes right-load {
-  100% {
-    transform: translate3d(0, 100%, 0);
-  }
-}
-@keyframes right-load {
-  100% {
-    transform: translate3d(0, 100%, 0);
-  }
-}
 @-webkit-keyframes rotate-icon {
   100% {
     opacity: 1;
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotate-icon {
   100% {
     opacity: 1;
@@ -397,6 +417,9 @@ nav div:nth-child(1) i, nav div:nth-child(1) span {
   margin-top: auto;
   margin-bottom: auto;
 }
+nav div:nth-child(1) i span, nav div:nth-child(1) span span {
+  font-weight: 1000;
+}
 nav div:nth-child(2) {
   background-color: #f6f6f6;
   display: flex;
@@ -489,7 +512,7 @@ main {
 }
 
 article {
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f6f6f6;
 }
@@ -502,6 +525,7 @@ article h2 {
 #article__rounded {
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
+  padding-top: 2rem;
 }
 
 .article__rounded--title {
@@ -514,7 +538,7 @@ article h2 {
   white-space: nowrap;
 }
 .article__rounded--title i {
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   font-size: clamp(20px, 5vw, 70px);
 }
 
@@ -559,6 +583,7 @@ aside h3 {
   padding-left: 0.5rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 2px 18px -11px rgba(0, 0, 0, 0.76);
 }
 .card--wrap p {
   text-overflow: ellipsis;
@@ -566,11 +591,10 @@ aside h3 {
   white-space: nowrap;
 }
 .card--wrap p:first-child {
-  font-weight: 1000;
-  font-size: normal;
+  font-weight: 900;
 }
-.card--wrap p:last-child {
-  font-size: small;
+.card--wrap p:nth-child(2) {
+  font-size: 14px;
 }
 .card--wrap .card--wrap__content {
   position: relative;
