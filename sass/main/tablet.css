@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1025px) {
+@media (min-width: 768px) and (max-width: 1020px) {
   aside h2 {
     text-align: center;
   }
@@ -11,11 +11,11 @@
   article .cards {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
   }
   article .card {
-    width: 45%;
+    width: 55%;
     margin: 0;
   }
   article h2 {
@@ -26,9 +26,17 @@
     padding: 2rem;
   }
   #article__rounded .aside-wrapper {
-    gap: 2rem;
+    gap: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  .card--wrap {
+    padding-left: 1rem;
+  }
+
+  .card--wrap__content span {
+    padding-right: 0.4rem;
   }
 
   footer {
@@ -37,4 +45,4 @@
   footer img {
     margin: auto;
   }
-}/*# sourceMappingURL=desktop.css.map */
+}/*# sourceMappingURL=tablet.css.map */

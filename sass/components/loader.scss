@@ -4,6 +4,7 @@
       z-index:1001;
       position: absolute;
       left: 50%;
+      transform:translate3d(-50%,0,0);
       top:50%;
       img{
         animation:500ms top-load ease;

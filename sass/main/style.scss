@@ -6,8 +6,8 @@
 @import "../components/titles.scss";
 @import "../components/loader.scss";
 @import "../lib/animations.scss";
-@import "desktop.css";
-
+@import "desktop.scss";
+@import "tablet.scss";
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -197,121 +197,53 @@ article{
     margin-left:1rem;
     white-space: nowrap;
   }
-  i{
-    padding-right:1.5rem;
-    font-size: clamp(20px, 5vw, 70px);    
-    
+  
+.heart::after{
+    font-size: clamp(22px, 7vw, 50px);
+    position:inherit;
+    margin-right:1rem;
   }
   
 }
 
-.card--wrap__active{
-  // COCHE
-  // COCHE
-  // COCHE
-  
-  height: 100%;
-  width:0px;
-  background-color: $color-tertiary;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  color:white;
-  position:absolute;
-  right:0;
-  border-top-right-radius: 1rem ;
-  border-bottom-right-radius: 1rem ;
+.heart::after{
   font-size: 1.5rem;
-  transition: width ease 700ms;
-  i{
-    opacity:1;
-    
-  }
-}
-
-
-aside h3{
-  font-weight: 800;
-  border-bottom: $color-tertiary solid 3px;
-  height: 25px;
-  width:40px;
-  transform: translateX(1rem);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  
-}
-
-.card--wrap{
-  width: 95%;
-  height:4rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  animation: cards-load ease-in 1s;
-  padding-left:0.5rem;
   position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 18px -11px rgba(0,0,0,0.76);
-
-
-
-  p  {
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space: nowrap;
-  }
-
-    p:first-child{
-     font-weight: 900;
-     
-    }
-    p:nth-child(2){
-      font-size: 14px;
-      
-      
-    }
-   .card--wrap__content{
-     position: relative;
-     width: 90%; 
-     height: 4rem;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     transition: width ease 500ms;
-     
-    span{
-      font-weight: 1000;
-      position: absolute;
-      bottom:10%;
-      right:-5%;
-      
-    }
-   } 
-  &:hover{
+  bottom:20%;
+  left:85%;
+  cursor:pointer;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-style: normal;
+  content:"\f004";
   
-    .card--wrap__content{
-      width:calc(100% - 5.5rem);
-      
-    p  {
-      text-overflow:ellipsis;
-      overflow:hidden;
-      white-space: nowrap;
-      width: 90%;
-    }
+  
+}
+.heart:hover{
+  
+  &::after{
+    animation:heart-fill ease 400ms;
+    animation-fill-mode: forwards;
     
-    }
-    .card--wrap__active{
-      width:4rem;
-      opacity:1;
-      i{
+    @keyframes heart-fill {
+      0%{
+        color:transparent;
+        opacity:0;
         
-        animation-name: rotate-icon;
-        animation-duration: 700ms;
-        animation-fill-mode:forwards;
       }
-    }
-    
+      
+      100%{
+        
+        opacity:1;
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+      }
   }
+}
 }
 

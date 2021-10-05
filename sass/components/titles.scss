@@ -4,3 +4,14 @@ h2{font-weight: bolder;font-size: clamp(30px, 5vw, 50px);}
 h6{
     font-family: 'Shrikhand', cursive;
    }
+
+   aside h3{
+    font-weight: 800;
+    border-bottom: $color-tertiary solid 3px;
+    height: 25px;
+    width:40px;
+    transform: translateX(1rem);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+  }

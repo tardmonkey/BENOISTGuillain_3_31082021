@@ -13,7 +13,9 @@ footer{
           display:flex;
           flex-direction: column;
           gap:0.5rem;
-        
+        a{
+          color:white
+        }
           li:nth-child(-n+2){
             font-weight: bold;
           }

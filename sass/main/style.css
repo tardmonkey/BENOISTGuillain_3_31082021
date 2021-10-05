@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "desktop.css";
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -58,6 +57,9 @@ footer ul {
   flex-direction: column;
   gap: 0.5rem;
 }
+footer ul a {
+  color: white;
+}
 footer ul li:nth-child(-n+2) {
   font-weight: bold;
 }
@@ -91,59 +93,6 @@ footer ul li:nth-child(-n+2) {
 .card li:nth-child(1) {
   font-weight: bold;
 }
-.card i::after {
-  font-size: 1.5rem;
-  position: relative;
-  bottom: 20%;
-  left: 85%;
-  cursor: pointer;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 500;
-  font-style: normal;
-  content: "";
-}
-.card i:hover::after {
-  -webkit-animation: heart-fill ease 1100ms;
-          animation: heart-fill ease 1100ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@-webkit-keyframes heart-fill {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 1000;
-    background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    color: transparent;
-  }
-}
-@keyframes heart-fill {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 1000;
-    background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    color: transparent;
-  }
-}
 
 .cardNew {
   background-color: #99E2D0;
@@ -156,6 +105,88 @@ footer ul li:nth-child(-n+2) {
   font-size: clamp(16px, 2.5vw, 1rem);
   color: #278870;
   border-radius: 0.2rem;
+}
+
+.card--wrap {
+  width: 95%;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  -webkit-animation: cards-load ease-in 1s;
+          animation: cards-load ease-in 1s;
+  padding-left: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 18px -11px rgba(0, 0, 0, 0.76);
+}
+.card--wrap p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card--wrap p:first-child {
+  font-weight: 900;
+}
+.card--wrap p:nth-child(2) {
+  font-size: 14px;
+}
+.card--wrap .card--wrap__content {
+  position: relative;
+  width: 90%;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: width ease 500ms;
+}
+.card--wrap .card--wrap__content span {
+  font-weight: 1000;
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  font-size: clamp(13px, 4vw, 1rem);
+}
+.card--wrap:hover .card--wrap__content {
+  width: calc(100% - 5.5rem);
+}
+.card--wrap:hover .card--wrap__content p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 90%;
+}
+.card--wrap:hover .card--wrap__active {
+  width: 4rem;
+  opacity: 1;
+}
+.card--wrap:hover .card--wrap__active i {
+  -webkit-animation-name: rotate-icon;
+          animation-name: rotate-icon;
+  -webkit-animation-duration: 700ms;
+          animation-duration: 700ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card--wrap__active {
+  height: 100%;
+  width: 0px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  font-size: 1.5rem;
+  transition: width ease 700ms;
+}
+.card--wrap__active i {
+  opacity: 1;
 }
 
 h1 {
@@ -172,10 +203,21 @@ h6 {
   font-family: "Shrikhand", cursive;
 }
 
+aside h3 {
+  font-weight: 800;
+  border-bottom: #99E2D0 solid 3px;
+  height: 25px;
+  width: 40px;
+  transform: translateX(1rem);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 #loader--wrap #loader {
   z-index: 1001;
   position: absolute;
   left: 50%;
+  transform: translate3d(-50%, 0, 0);
   top: 50%;
 }
 #loader--wrap #loader img {
@@ -357,6 +399,94 @@ h6 {
           animation-delay: 200ms;
 }
 
+@media only screen and (min-width: 1025px) {
+  aside h2 {
+    text-align: center;
+  }
+
+  #howto-btn {
+    width: 50%;
+    margin: auto;
+  }
+
+  article .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  article .card {
+    width: 45%;
+    margin: 0;
+  }
+  article h2 {
+    text-align: center;
+  }
+
+  #article__rounded {
+    padding: 2rem;
+  }
+  #article__rounded .aside-wrapper {
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer img {
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1020px) {
+  aside h2 {
+    text-align: center;
+  }
+
+  #howto-btn {
+    width: 50%;
+    margin: auto;
+  }
+
+  article .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  article .card {
+    width: 55%;
+    margin: 0;
+  }
+  article h2 {
+    text-align: center;
+  }
+
+  #article__rounded {
+    padding: 2rem;
+  }
+  #article__rounded .aside-wrapper {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card--wrap {
+    padding-left: 1rem;
+  }
+
+  .card--wrap__content span {
+    padding-right: 0.4rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer img {
+    margin: auto;
+  }
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -537,98 +667,59 @@ article h2 {
   margin-left: 1rem;
   white-space: nowrap;
 }
-.article__rounded--title i {
-  padding-right: 1.5rem;
-  font-size: clamp(20px, 5vw, 70px);
+.article__rounded--title .heart::after {
+  font-size: clamp(22px, 7vw, 50px);
+  position: inherit;
+  margin-right: 1rem;
 }
 
-.card--wrap__active {
-  height: 100%;
-  width: 0px;
-  background-color: #99E2D0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: absolute;
-  right: 0;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+.heart::after {
   font-size: 1.5rem;
-  transition: width ease 700ms;
-}
-.card--wrap__active i {
-  opacity: 1;
+  position: relative;
+  bottom: 20%;
+  left: 85%;
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-style: normal;
+  content: "";
 }
 
-aside h3 {
-  font-weight: 800;
-  border-bottom: #99E2D0 solid 3px;
-  height: 25px;
-  width: 40px;
-  transform: translateX(1rem);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.card--wrap {
-  width: 95%;
-  height: 4rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  -webkit-animation: cards-load ease-in 1s;
-          animation: cards-load ease-in 1s;
-  padding-left: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 18px -11px rgba(0, 0, 0, 0.76);
-}
-.card--wrap p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.card--wrap p:first-child {
-  font-weight: 900;
-}
-.card--wrap p:nth-child(2) {
-  font-size: 14px;
-}
-.card--wrap .card--wrap__content {
-  position: relative;
-  width: 90%;
-  height: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: width ease 500ms;
-}
-.card--wrap .card--wrap__content span {
-  font-weight: 1000;
-  position: absolute;
-  bottom: 10%;
-  right: -5%;
-}
-.card--wrap:hover .card--wrap__content {
-  width: calc(100% - 5.5rem);
-}
-.card--wrap:hover .card--wrap__content p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 90%;
-}
-.card--wrap:hover .card--wrap__active {
-  width: 4rem;
-  opacity: 1;
-}
-.card--wrap:hover .card--wrap__active i {
-  -webkit-animation-name: rotate-icon;
-          animation-name: rotate-icon;
-  -webkit-animation-duration: 700ms;
-          animation-duration: 700ms;
+.heart:hover::after {
+  -webkit-animation: heart-fill ease 400ms;
+          animation: heart-fill ease 400ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+@-webkit-keyframes heart-fill {
+  0% {
+    color: transparent;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes heart-fill {
+  0% {
+    color: transparent;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */

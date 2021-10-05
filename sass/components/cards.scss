@@ -27,49 +27,7 @@
   li:nth-child(1){
     font-weight: bold;
   }
-  i::after{
-    font-size: 1.5rem;
-    position: relative;
-    bottom:20%;
-    left:85%;
-    cursor:pointer;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 500;
-    font-style: normal;
-    content:"\f004";
-    
-    
-  }
-  i:hover{
-    
-    &::after{
-      animation:heart-fill ease 1100ms;
-      animation-fill-mode: forwards;
-      
-     
-      @keyframes heart-fill {
-        0%{
-          
-           opacity:0;
-        }
-        30%{
-          opacity:0;
-        }
-        100%{
-         
-          opacity:1;
-          font-family: "Font Awesome 5 Free";
-          font-weight: 1000;
-          background-image: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -moz-background-clip: text;
-          color: transparent;
-        }
-    }
-  }
-}
-
+  
 }
 .cardNew{
     background-color: $color-tertiary;
@@ -87,3 +45,102 @@
 
 
 
+  .card--wrap{
+    width: 95%;
+    height:4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    animation: cards-load ease-in 1s;
+    padding-left:0.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 18px -11px rgba(0,0,0,0.76);
+  
+  
+  
+    p  {
+      text-overflow:ellipsis;
+      overflow:hidden;
+      white-space: nowrap;
+    }
+  
+      p:first-child{
+       font-weight: 900;
+       
+      }
+      p:nth-child(2){
+        font-size: 14px;
+        
+        
+      }
+     .card--wrap__content{
+       position: relative;
+       width: 90%; 
+       height: 4rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       transition: width ease 500ms;
+       
+      span{
+        font-weight: 1000;
+        position: absolute;
+        bottom:10%;
+        right:-5%;
+        font-size: clamp(13px, 4vw, 1rem);
+        
+      }
+     } 
+    &:hover{
+    
+      .card--wrap__content{
+        width:calc(100% - 5.5rem);
+        
+      p  {
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
+        width: 90%;
+      }
+      
+      }
+      .card--wrap__active{
+        width:4rem;
+        opacity:1;
+        i{
+          
+          animation-name: rotate-icon;
+          animation-duration: 700ms;
+          animation-fill-mode:forwards;
+        }
+      }
+      
+    }
+  }
+
+  
+.card--wrap__active{
+  // COCHE
+  // COCHE
+  // COCHE
+  
+  height: 100%;
+  width:0px;
+  background-color: $color-tertiary;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  position:absolute;
+  right:0;
+  border-top-right-radius: 1rem ;
+  border-bottom-right-radius: 1rem ;
+  font-size: 1.5rem;
+  transition: width ease 700ms;
+  i{
+    opacity:1;
+    
+  }
+}
