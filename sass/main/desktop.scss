@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1021px) {
     aside{
         h2{
             text-align: center;
@@ -12,8 +12,9 @@
        .cards{
            flex-direction: row;
            flex-wrap: wrap;
-           gap:2rem;
            justify-content: center;
+           gap:1rem;
+           
        }
        .card{
            width:45%;
@@ -31,7 +32,7 @@
        padding:2rem;
     .aside-wrapper{
         
-        gap:2rem;
+        
         display: flex;
         flex-direction: row;
        

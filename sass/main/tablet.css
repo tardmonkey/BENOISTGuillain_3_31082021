@@ -35,8 +35,8 @@
     padding-left: 1rem;
   }
 
-  .card--wrap__content span {
-    padding-right: 0.4rem;
+  .card--wrap:hover span {
+    margin-right: 1rem;
   }
 
   footer {

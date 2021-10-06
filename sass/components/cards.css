@@ -76,6 +76,7 @@
   transition: width ease 500ms;
 }
 .card--wrap .card--wrap__content span {
+  display: inline-block;
   font-weight: 1000;
   position: absolute;
   bottom: 10%;

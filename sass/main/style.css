@@ -142,6 +142,7 @@ footer ul li:nth-child(-n+2) {
   transition: width ease 500ms;
 }
 .card--wrap .card--wrap__content span {
+  display: inline-block;
   font-weight: 1000;
   position: absolute;
   bottom: 10%;
@@ -399,7 +400,7 @@ aside h3 {
           animation-delay: 200ms;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1021px) {
   aside h2 {
     text-align: center;
   }
@@ -412,8 +413,8 @@ aside h3 {
   article .cards {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 1rem;
   }
   article .card {
     width: 45%;
@@ -427,7 +428,6 @@ aside h3 {
     padding: 2rem;
   }
   #article__rounded .aside-wrapper {
-    gap: 2rem;
     display: flex;
     flex-direction: row;
   }
@@ -476,8 +476,8 @@ aside h3 {
     padding-left: 1rem;
   }
 
-  .card--wrap__content span {
-    padding-right: 0.4rem;
+  .card--wrap:hover span {
+    margin-right: 1rem;
   }
 
   footer {
