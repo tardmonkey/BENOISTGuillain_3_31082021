@@ -1,5 +1,6 @@
 @media only screen and (min-width: 1021px) {
     aside{
+       
         h2{
             text-align: center;
         }
@@ -30,12 +31,15 @@
 
    #article__rounded{
        padding:2rem;
+       aside{
+        width:50%;
+      }
     .aside-wrapper{
         
         
         display: flex;
         flex-direction: row;
-       
+        flex-wrap: wrap;
     }
  }
 
@@ -47,9 +51,21 @@ footer{
     }
 }
 
-
-
-
-
+.btn--wrapper{
+    display: block;
+    height: 5rem;
+    width:100%;
+    .btn{
+    color:white;
+      padding-left:4rem;
+      padding-right:4rem;
+      
+    }
   }
 
+}
+
+  
+.card:hover{
+    transform:scale(1.05);
+}

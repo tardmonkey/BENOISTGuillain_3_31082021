@@ -1,9 +1,16 @@
 @mixin button {
     background: $color-gradient;
     border-radius: 2rem;
-    color:#fff;
     padding:1rem;
     max-width: 70vw;
     margin: auto;
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.67);
+    font-weight: bold;
+    color:white;
+   
+    &:hover{
+        transform: scale(1.1);
+        
+    }
 }
 

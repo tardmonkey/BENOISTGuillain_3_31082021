@@ -427,9 +427,13 @@ aside h3 {
   #article__rounded {
     padding: 2rem;
   }
+  #article__rounded aside {
+    width: 50%;
+  }
   #article__rounded .aside-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   footer {
@@ -438,7 +442,22 @@ aside h3 {
   footer img {
     margin: auto;
   }
+
+  .btn--wrapper {
+    display: block;
+    height: 5rem;
+    width: 100%;
+  }
+  .btn--wrapper .btn {
+    color: white;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
+.card:hover {
+  transform: scale(1.05);
+}
+
 @media (min-width: 768px) and (max-width: 1020px) {
   aside h2 {
     text-align: center;
@@ -557,15 +576,6 @@ nav div:nth-child(2) {
   gap: 1rem;
   padding: 3rem;
   text-align: center;
-}
-nav .btn {
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  border-radius: 2rem;
-  color: #fff;
-  padding: 1rem;
-  max-width: 70vw;
-  margin: auto;
-  box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.67);
 }
 
 main {
@@ -722,4 +732,29 @@ article h2 {
     -moz-background-clip: text;
     color: transparent;
   }
+}
+
+.btn--wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 8rem;
+}
+.btn--wrapper .btn {
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  border-radius: 2rem;
+  padding: 1rem;
+  max-width: 70vw;
+  margin: auto;
+  box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.67);
+  font-weight: bold;
+  color: white;
+}
+.btn--wrapper .btn:hover {
+  transform: scale(1.1);
+}
+
+.aside-wrapper .btn {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }/*# sourceMappingURL=style.css.map */

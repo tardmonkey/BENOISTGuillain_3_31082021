@@ -25,9 +25,13 @@
   #article__rounded {
     padding: 2rem;
   }
+  #article__rounded aside {
+    width: 50%;
+  }
   #article__rounded .aside-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   footer {
@@ -36,4 +40,18 @@
   footer img {
     margin: auto;
   }
+
+  .btn--wrapper {
+    display: block;
+    height: 5rem;
+    width: 100%;
+  }
+  .btn--wrapper .btn {
+    color: white;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+.card:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=desktop.css.map */
