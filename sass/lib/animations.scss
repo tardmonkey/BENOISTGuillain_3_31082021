@@ -27,6 +27,12 @@
       display: none;
     }
   }
+  .loader img {animation-name: text-load;animation-duration: 1s;}
+  @keyframes text-load{
+    80%{
+      opacity:0;
+    }
+  }
 
   @keyframes top-load {
     100%{

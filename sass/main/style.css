@@ -322,6 +322,24 @@ aside h3 {
     display: none;
   }
 }
+.loader img {
+  -webkit-animation-name: text-load;
+          animation-name: text-load;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes text-load {
+  80% {
+    opacity: 0;
+  }
+}
+
+@keyframes text-load {
+  80% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes top-load {
   100% {
     transform: translate3d(0, -10000%, 0);
